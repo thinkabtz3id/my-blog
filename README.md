@@ -1,0 +1,1 @@
+The Guidance Office of Allen National High School (ANHS) serves as a support system for students, teachers, and parents in ensuring holistic development, well-being, and academic success. It provides counseling, guidance, and various student-centered programs that foster responsible decision-making, career readiness, and positive values.
