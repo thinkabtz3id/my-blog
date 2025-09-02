@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #081F5C;
+            color: #F7F2EB;
+            font-family: Arial, sans-serif;
+        }
+
+		.container {
+            position: relative;
+            background-color: #081F5C;
+            padding: 100px 10%;
+            margin-top: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+		
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 50px;
+        }
+
+        .school-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #081F5C;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            font-weight: bold;
+            color: #081F5C;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .nav-item:hover {
+            background: #334EAC;
+            color: white;
+        }
+
+        .container {
+            background-color: #334EAC;
+            padding: 50px 10%;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #081F5C;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background-color: #081F5C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .thank-you-message {
+            display: none;
+            font-size: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #334EAC;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+    <script>
+         function handleSubmit(event) {
+            event.preventDefault();
+            document.querySelector('button[type="submit"]').textContent = 'Submitting...';
+            setTimeout(() => {
+                document.querySelector('form').style.display = 'none';
+                document.querySelector('.thank-you-message').style.display = 'block';
+            }, 1500);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('form').addEventListener('submit', handleSubmit);
+        });
+    </script>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo-container">
+        <a href="homepage.html">
+            <img src="ANHS Logo.png" alt="Logo">
+            <span class="school-name">GUIDANCE OFFICE</span>
+        </a>
+    </div>
+    <div class="nav-right">
+        <a href="homepage.html" class="nav-item">ABOUT</a>
+        <a href="objectives.html" class="nav-item">OBJECTIVES</a>
+        <a href="programs.html" class="nav-item">PROGRAMS</a>
+        <a href="careers.html" class="nav-item">MONITORING</a>
+    </div>
+</div>
+
+<div class="container">
+<h1>FEEDBACK FORM</h1>
+<p>We value your feedback! Please take a moment to share your thoughts.</p><br>
+
+<form onsubmit="handleSubmit(event)">
+     <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+    <label for="email">Email Address:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+    <br>
+    <label for="rating">How satisfied are you with our services?</label>
+    <select id="rating" name="rating" required>
+        <option value="">Select Satisfaction Level</option>
+        <option value="5">Very Satisfied</option>
+        <option value="4">Satisfied</option>
+        <option value="3">Neutral</option>
+        <option value="2">Dissatisfied</option>
+        <option value="1">Very Dissatisfied</option>
+    </select>
+    
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="3" placeholder="Share your thoughts"></textarea>
+    
+	<br>
+    
+    <center><button type="submit"> Submit</button>
+    <button type="reset"></i> Clear</button></center>
+
+<br> 
+<strong>NOTE:</strong> <p> All information submitted through the feedback form will be kept confidential and used solely for the improvement of guidance services, in compliance with the Data Privacy Act of 2012 (Republic Act No. 10173). </p>
+</form>
+
+
+    <div class="thank-you-message">
+        <p>Thank you for your feedback! We appreciate your time and effort.</p>
+    </div>
+</div>
+
+<footer style="background-color: white; color: #081F5C; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; text-align: left;">
+        
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Allen National High School</h3>
+            <p>Allen, Northern Samar, Philippines</p>
+            <p>Phone: +63 XXX-XXX-XXXX</p>
+            <p>Email: allennhs@deped.gov.ph</p>
+            <p><a href="map.html" style="color: #FFD700; text-decoration: none;">Campus Map</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Directory</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Resources</h3>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Portal</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Library System</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Student Records</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Announcements</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Policies & Information</h3>
+            <p><a href="privacy.html" style="color: #FFD700; text-decoration: none;">Privacy Policy</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Charter</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Feedbacks</a></p>
+        </div>
+    </div>
+
+    <p>&copy; 2025 Allen National High School | All Rights Reserved</p>
+	<p>This website is managed by the Vetonio & Co.</p>
+    </div>
+
+    <a href="#" style="position: fixed; bottom: 20px; right: 20px;">
+        <img src="up-arrow.png" alt="Back to Top" width="40">
+    </a>
+</footer>
+
+</body>
+</html>
