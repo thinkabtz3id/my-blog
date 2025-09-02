@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Campus | Allen National High School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #081F5C;
+            color: #F7F2EB;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 50px;
+        }
+
+        .school-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #081F5C;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            font-weight: bold;
+            color: #081F5C;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .nav-item:hover {
+            background: #334EAC;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 120px auto 50px;
+            background-color: #334EAC;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .campus-image {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: white;
+            color: #081F5C;
+            padding: 30px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="navbar">
+    <div class="logo-container">
+        <a href="homepage.html">
+            <img src="ANHS Logo.png" alt="Logo">
+            <span class="school-name">GUIDANCE OFFICE</span>
+        </a>
+    </div>
+    <div class="nav-right">
+        <a href="homepage.html" class="nav-item">ABOUT</a>
+        <a href="objectives.html" class="nav-item">OBJECTIVES</a>
+        <a href="programs.html" class="nav-item">PROGRAMS</a>
+        <a href="careers.html" class="nav-item">MONITORING</a>
+    </div>
+</div>
+
+
+<div class="container">
+    <h2>Our Campus</h2>
+    <img src="aerial.jpg" alt="Aerial View of ANHS Campus" class="campus-image">
+    <p class="description">
+        Welcome to Allen National High School! Our campus is designed to provide students with a safe, engaging, and 
+        conducive learning environment. Surrounded by the community, our school features well-structured classrooms, 
+        spacious grounds, and essential facilities to support academic and extracurricular activities.
+    </p>
+</div>
+
+
+<footer style="background-color: white; color: #081F5C; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; text-align: left;">
+        
+      
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Allen National High School</h3>
+            <p>Allen, Northern Samar, Philippines</p>
+            <p>Phone: +63 XXX-XXX-XXXX</p>
+            <p>Email: allennhs@deped.gov.ph</p>
+            <p><a href="map.html" style="color: #FFD700; text-decoration: none;">Campus Map</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Directory</a></p>
+            
+           
+            <div style="margin-top: 10px;">
+                <a href="https://facebook.com" target="_blank"><img src="fb.png" alt="Facebook" width="25"></a>
+                <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter" width="25"></a>
+                <a href="https://instagram.com" target="_blank"><img src="ig.png" alt="Instagram" width="25"></a>
+            </div>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Resources</h3>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Portal</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Library System</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Student Records</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Announcements</a></p>
+        </div>
+
+        
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Policies & Information</h3>
+            <p><a href="privacy.html" style="color: #FFD700; text-decoration: none;">Privacy Policy</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Charter</a></p>
+            <p><a href="feedback.html" style="color: #FFD700; text-decoration: none;">Feedbacks</a></p>
+        </div>
+    </div>
+
+    <hr style="border: 0.5px solid #555; margin: 20px auto; width: 90%;">
+
+    <div style="text-align: center;">
+        <p>&copy; 2025 Allen National High School | All Rights Reserved</p>
+        <p>This website is managed by the Vetonio & Co.</p>
+    </div>
+
+    
+    <a href="#" style="position: fixed; bottom: 20px; right: 20px;">
+        <img src="up-arrow.png" alt="Back to Top" width="40">
+    </a>
+</footer>
+
+</body>
+</html>

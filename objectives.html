@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objectives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #081F5C;
+            color: #F7F2EB;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo-container a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .navbar .logo-container img {
+            height: 50px;
+        }
+
+        .navbar .school-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #081F5C;
+        }
+
+        .navbar .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navbar .nav-item {
+            font-size: 16px;
+            font-weight: bold;
+            color: #081F5C;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .navbar .nav-item:hover {
+            background: #334EAC;
+            color: white;
+        }
+
+       
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 2px solid #081F5C;
+            border-radius: 5px;
+            padding: 5px;
+            background: white;
+        }
+
+        .search-container input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .search-container button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #081F5C;
+        }
+
+        
+        .container {
+            margin: 80px auto 30px;
+            width: 80%;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .objectives-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .objective {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .objective:hover {
+            transform: scale(1.05);
+        }
+
+        .objective img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+       
+        .footer {
+            background-color: #334EAC;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo-container">
+        <a href="homepage.html">
+            <img src="ANHS Logo.png" alt="Logo">
+            <span class="school-name">GUIDANCE OFFICE</span>
+        </a>
+    </div>
+
+    <div class="nav-right">
+        <a href="homepage.html" class="nav-item">ABOUT</a>
+        <a href="objectives.html" class="nav-item">OBJECTIVES</a>
+        <a href="programs.html" class="nav-item">PROGRAMS</a>
+        <a href="careers.html" class="nav-item">MONITORING</a>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search">
+            <button onclick="searchObjectives()">🔍</button>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container" id="objectives-section">
+    <h2>Guidance Office Objectives</h2>
+    <div class="objectives-list" id="objectives-list">
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Academic">
+            <p>Assist students in their academic, personal, and social development.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Support">
+            <p>Provide guidance services that support overall well-being.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/1081/1081029.png" alt="School Policies">
+            <p>Help students adjust to the school environment and understand policies.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Counseling">
+            <p>Offer individual and group counseling for personal and academic concerns.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/2995/2995482.png" alt="Assessment">
+            <p>Assess students’ abilities and needs through standardized tests.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/4503/4503593.png" alt="Monitoring">
+            <p>Monitor students’ progress and provide necessary support.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/9293/9293944.png" alt="Career">
+            <p>Guide students in making informed career choices.</p>
+        </div>
+        <div class="objective">
+            <img src="https://cdn-icons-png.flaticon.com/512/2554/2554130.png" alt="Policies">
+            <p>Establish clear policies for effective implementation of guidance services.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function searchTable() {
+        let input = document.getElementById("search-input").value.toLowerCase();
+        let tables = [document.getElementById("student-table"), document.getElementById("pregnant-table")];
+
+        tables.forEach(table => {
+            let rows = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < rows.length; i++) { // Start from 1 to ignore header
+                let rowText = rows[i].innerText.toLowerCase();
+                rows[i].style.display = rowText.includes(input) ? "" : "none";
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("objectives-section").classList.add("fade-in");
+    });
+</script>
+
+<footer style="background-color: white; color: #081F5C; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; text-align: left;">
+        
+        <!-- Left Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Allen National High School</h3>
+            <p>Allen, Northern Samar, Philippines</p>
+            <p>Phone: +63 XXX-XXX-XXXX</p>
+            <p>Email: allennhs@deped.gov.ph</p>
+            <p><a href="map.html" style="color: #FFD700; text-decoration: none;">Campus Map</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Directory</a></p>
+            
+            <!-- Social Media Icons -->
+            <div style="margin-top: 10px;">
+                <a href="https://facebook.com" target="_blank"><img src="fb.png" alt="Facebook" width="25"></a>
+                <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter" width="25"></a>
+                <a href="https://instagram.com" target="_blank"><img src="ig.png" alt="Instagram" width="25"></a>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Resources</h3>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Portal</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Library System</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">Student Records</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Announcements</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+            <h3>Policies & Information</h3>
+            <p><a href="privacy.html" style="color: #FFD700; text-decoration: none;">Privacy Policy</a></p>
+            <p><a href="#" style="color: #FFD700; text-decoration: none;">School Charter</a></p>
+            <p><a href="feedback.html" style="color: #FFD700; text-decoration: none;">Feedbacks</a></p>
+        </div>
+    </div>
+
+    <hr style="border: 0.5px solid #555; margin: 20px auto; width: 90%;">
+
+    <div style="text-align: center;">
+        <p>&copy; 2025 Allen National High School | All Rights Reserved</p>
+        <p>This website is managed by the Vetonio & Co.</p>
+    </div>
+
+    <a href="#" style="position: fixed; bottom: 20px; right: 20px;">
+        <img src="up-arrow.png" alt="Back to Top" width="40">
+    </a>
+</footer>
+</body>
+</html>
